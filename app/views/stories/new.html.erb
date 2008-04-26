@@ -1,0 +1,26 @@
+<div class="panel_signup">
+
+<div class="container">
+<div class="separator_top"/>&nbsp;</div>
+
+<%= error_messages_for :story %>
+
+<h1 align="right">Novo Artigo!</h1>
+<% form_for(@story) do |f| %>
+<div style="border:0;padding-right:3em;padding-left:3em;">
+<div class="panel_title">
+<label for="title">&nbsp;Título</label><br/>
+<%= f.text_field :title, :size => 61 %>
+</div>
+
+<div class="panel_contents_2">
+<label for="contents">&nbsp;Conteúdo</label><br/>
+<%= f.text_area :contents, :rows => 10, :cols => 60 %>
+</div><p/>
+<div class="panel_submit">
+    <%= f.submit "Criar" %>
+</div>
+</div>
+<% end %>
+</div>
+</div>

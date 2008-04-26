@@ -1,0 +1,48 @@
+<div class="panel_signup">
+  <div class="container">
+    <div class="separator_top"/>&nbsp;</div><p/>
+<p>
+  <h1><%=h @project.title %></h1>
+</p>
+
+<h2><%=h @project.subtitle %></h2>
+
+<p>
+  <b>Licença:</b><br/>
+  <%=h @project.contents %><br/>
+  <%= link_to 'Descarregar', "../upload/#{@project.to_param}/LICENSE.txt" %>
+</p>
+
+<p>
+  <b>Manifesto</b><br/>
+  <%= link_to 'Descarregar', "../upload/#{@project.to_param}/MANIFEST.yml" %>
+</p>
+
+<% if File.exists? File.expand_path("#{RAILS_ROOT}/public/upload/#{@project.to_param}/relatorio")%>
+<p>
+  <b>Relatório:</b><br/>
+  <%= link_to 'Descarregar', "../upload/#{@project.to_param}/relatorio.zip" %>
+</p>
+<% end %>
+<% if File.exists? File.expand_path("#{RAILS_ROOT}/public/upload/#{@project.to_param}/apresentacao")%>
+<p>
+  <b>Apresentação:</b><br/>
+  <%= link_to 'Descarregar', "../upload/#{@project.to_param}/apresentacao.zip" %>
+</p>
+<% end %>
+<% if File.exists? File.expand_path("#{RAILS_ROOT}/public/upload/#{@project.to_param}/codigo")%>
+<p>
+  <b>Código:</b><br/>
+  <%= link_to 'Descarregar', "../upload/#{@project.to_param}/codigo.zip" %>
+</p>
+<% end %>
+<p>
+  <b>Ficheiro:</b>
+  <%= link_to 'Navegar', "file://" + @project.filepath %><br/>
+  <%= link_to 'Descarregar', "../upload/#{@project.to_param}/#{@project.filename}" %>
+  
+</p>
+
+
+<%= link_to 'Voltar', projects_path %>
+</div></div></div>

@@ -1,0 +1,21 @@
+<p>
+  <b>Title</b><br />
+  <%= f.text_field :title %>
+</p>
+<p>
+  <b>Deadline</b><br />
+<%= f.date_select(:deadline, :order => [:day, :month, :year], :use_month_numbers => true, :start_year => Time.now.year) %>
+</p>
+<p>
+  <b>Subject</b><br />
+<%= f.collection_select(:subject_id , @subjects, "id", "name") %>
+</p>
+<p>
+  <b>Subtitle</b><br />
+  <%= f.text_field :subtitle %>
+</p>
+
+<p>
+  <b>Contents</b><br />
+  <%= f.text_area :contents %>
+</p>

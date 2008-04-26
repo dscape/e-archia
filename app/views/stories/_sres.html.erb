@@ -1,0 +1,15 @@
+<h2><%= link_to sres.title, artigo_path(sres.permalink) %></h2>
+<%= sres.contents %><br/>&nbsp;
+<ul>
+  <li style="background: url(/images/silk/icons/user.png) no-repeat left top;">
+    Submetido por <%= link_to sres.user.name, utilizador_path(sres.user.username) %>
+  </li>
+  <li style="background: url(/images/silk/icons/time.png) no-repeat left top;">
+    Criado <%= Util.timeago(sres.created_at) %>
+  </li>
+  <% unless sres.updated_at == sres.created_at %>
+  <li style="background: url(/images/silk/icons/note.png) no-repeat left top;">
+    Editado pela última vez <%= Util.timeago(sres.updated_at) %>.
+  </li>
+<% end %></ul><br/>
+

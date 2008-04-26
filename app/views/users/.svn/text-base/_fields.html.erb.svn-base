@@ -1,0 +1,34 @@
+<div class="panel_signup_form">
+<div class="personal_info">
+<div class="panel_username">
+<label for="username">&nbsp;Nome de Utilizador</label><br/>
+<%= f.text_field :username, :size => 28 %>
+</div>
+<div class="panel_name">
+<label for="name">&nbsp;Nome Próprio</label><br/>
+<%= f.text_field :name, :size => 28 %>
+</div>
+<div class="panel_homepage">
+<label for="homepage">&nbsp;Página Web</label><br/>
+<%= f.text_field :homepage, :size => 28 %>
+</div>
+<div class="panel_profile">
+<label for="profile">&nbsp;Perfil</label><br/>
+<%= f.text_area :profile, :rows => 11, :cols => 60 %> <!-- 61 -->
+</div>
+</div>
+<div class="password_and_confirmation">
+<div class="panel_email">
+<label for="email">&nbsp;Email</label><br/>
+<%= f.text_field :email, :size => 28 %>
+</div>
+<div class="panel_password">
+<label for="password">&nbsp;Palavra Passe</label><br/>
+<%= f.password_field :password, :size => 28 %>
+</div> 
+<div class="panel_password_confirmation">
+<label for="password_confirmation">&nbsp;Volte a inserir a Palavra Passe</label><br/>
+<%= f.password_field :password_confirmation, :size => 28 %>
+</div>
+</div>
+</div>

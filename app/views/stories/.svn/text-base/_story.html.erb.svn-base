@@ -1,0 +1,3 @@
+<dd><%= link_to story.title,
+          artigo_path(story.permalink) %></dd>
+<dt>por <%= link_to story.user.name, utilizador_path(story.user.username) %> <%= story.timeago %></dt>

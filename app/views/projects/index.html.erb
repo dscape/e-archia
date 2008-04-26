@@ -1,0 +1,29 @@
+<div class="panel_signup">
+  <div class="container">
+    <div class="separator_top"/>&nbsp;</div><p/>
+<h1>Listing projects</h1>
+
+<table>
+<tr>
+  <th>Title</th>
+  <th>Subtitle</th>
+  <th>Permalink</th>
+  <th>Contents</th>
+</tr>
+
+<% for project in @projects %>
+  <tr>
+    <td><%=h project.title %></td>
+    <td><%=h project.subtitle %></td>
+    <td><%=h project.permalink %></td>
+    <td><%=h project.contents %></td>
+    <td><%= link_to 'Show', project %></td>
+    <td><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New project', new_project_path %>
+</div></div></div>

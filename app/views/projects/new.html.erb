@@ -1,0 +1,19 @@
+<div class="panel_signup">
+  <div class="container">
+    <div class="separator_top"/>&nbsp;</div><p/>
+<h1>Inserir Trabalho</h1>
+
+<%= error_messages_for :project %>
+
+<% form_for @project, :html => {:multipart => true} do |f| %>
+<%= render :partial => 'fields',  :locals => { :f => f } %>
+<p>
+  <p>
+    <%= f.submit "Criar" %>
+  </p>
+<% end %>
+
+<%= link_to 'Voltar', projects_path %>
+</div>
+</div>
+</div>

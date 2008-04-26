@@ -1,0 +1,7 @@
+<% if session[:user].blank? %>
+	<%= render :partial => 'index' %>
+<% else %>
+	<%= render :partial => 'signedin_index' %>
+<% end %>
+</div>
+</div>

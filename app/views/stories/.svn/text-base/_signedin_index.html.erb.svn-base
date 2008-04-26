@@ -1,0 +1,31 @@
+<h1>Listing stories</h1>
+<center>
+<%= link_to "RSS Feed", formatted_stories_url(:rss) %>
+<table width="90%" style="border: #CCC solid 1px;">
+  <tr>
+    <th width="30%">Title</th>
+    <th width="35%">Contents</th>
+    <th width="20%">Permalink</th>
+	<th width="5%">Show</th>
+	<th width="5%">Edit</th>
+	<th width="5%">Delete</td>
+  </tr>
+
+<% for story in @stories %>
+  <tr>
+    <td align="center"><%=h story.title %></td>
+    <td align="center"><%=h story.contents %></td>
+    <td align="center"><%=h story.permalink %></td>
+    <td align="center"><%= link_to 'V', story %></td>
+    <td align="center"><%= link_to 'E', edit_story_url(story) %></td>
+    <td align="center"><%= link_to 'X', story, :confirm => 'Tens a certeza?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nova notícia', new_story_path %>
+<%= link_to 'Sair', signout_url %>
+<br/><br/>
+</center>

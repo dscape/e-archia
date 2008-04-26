@@ -1,0 +1,882 @@
+/*
+  ###################################################################
+  e-archia: main stylesheet
+  author: nunojobpinto[at]gmail[dot]com
+  keep your head in the grass. sleep.
+  (ox)------'-
+  ###################################################################
+ */
+/*
+  ###################################################################
+  XHTML standard elements
+  ###################################################################
+ */
+p,code {
+padding-bottom: 0;
+}
+
+table,tr,td {
+padding: 0;
+margin: 0;
+}
+h1,h2,h3,h4,h5 {
+text-transform: uppercase;
+padding-bottom: 10px;
+}
+a {
+color: #06f;
+text-decoration: none;
+}
+a:visited {
+color: #09f;
+}
+a:hover {
+color: #f06;
+}
+body {
+background-color: #e7e7e7;
+font-family: 'HelveticaNeue','Helvetica Neue','Arial',sans-serif;
+font-size: .8em;
+color: #444;
+}
+blockquote {
+background: #fafafa url(/images/quote.gif) no-repeat right top;
+border-bottom: 1px solid #eee;
+border-top: 1px solid #eee;
+color: #444;
+display: block;
+margin-bottom: 12px;
+padding: 12px;
+font-size: 1.1em;
+}
+blockquote .author {
+padding-top: 1em;
+text-align: right;
+font-size: .8em;
+}
+code, pre, .panel_main_page_left, .stripes {
+font-size: 0.8em;
+background: url(/images/bg_code.png);
+border-style: solid;
+border-width: 1px 1px 1px 6px;
+border-color: #eee #eee #eee #f06;
+color: #444;
+display: block;
+font-family: "Monaco", "Lucida Sans Unicode", serif;
+margin-bottom: 12px;
+padding: 8px 10px;
+white-space: pre;
+}
+
+h1 {
+color: #f06;
+font-size: 1.3em;
+font-weight: bold;
+margin: 0px;
+}
+h2 {
+color: #06f;
+font-size: 1.3em;
+font-weight: bold;
+margin: 0px;
+}
+h3 {
+color: #f06;
+font-size: 1em;
+margin: 0px;
+font-family: 'HelveticaNeue-Light','Helvetica Neue','Helvetica Neue Light','Arial',sans-serif;
+}
+h4 {
+color: #f06;
+font-size: 1em;
+margin: 0px;
+font-family: 'HelveticaNeue-Light','Helvetica Neue','Helvetica Neue Light','Arial',sans-serif;
+border-style: solid;
+border-width: 0px 0px 2px 0px;
+border-color: #eee #eee #eee #f06;
+}
+img {
+border: 0;
+}
+em {
+color: #06f;
+}
+p {
+}
+ul {
+margin:0;
+margin-left: 10px;
+padding: 0px;
+list-style: none;
+line-height:.5em;
+}
+li {
+margin:0;
+padding: 0 0 0 25px;
+line-height: 1em;
+background: none;
+}
+dl {
+margin-left: 0px;
+padding: 0px;
+}
+dd {
+margin: 0px;
+line-height: 1em;
+font-size: 1.1em;
+text-transform: capitalize;
+font-family: 'HelveticaNeue-Light','Helvetica Neue','Helvetica Neue Light','Arial',sans-serif;
+}
+dt {
+font-size: .8em;
+border-style: dotted;
+border-width: 0px 0px 1px 0px;
+border-color: #ddd;
+text-transform: lowercase;
+}
+br {
+font-size: large;
+}
+/*
+  ###################################################################
+  working on rails - derailing
+  ###################################################################
+ */
+.errorExplanation {
+padding: 12px 0 0 0;
+margin-bottom: 1.5em;
+border-style: solid;
+border-width: 1px 0px 1px 0px;
+border-color: #eee;
+background: url(/images/bg_code.png);
+}
+.errorExplanation h2 {
+width: 95%;
+color: #f06;
+font-size: 1.2em;
+height: 20px;
+background: url(/images/silk/icons/exclamation.png) no-repeat right top;
+}
+.errorExplanation ul {
+margin: 0 0 15px 0;
+padding: 0 0 5px 0;
+}
+.errorExplanation p {
+margin: 0;
+padding: 0;
+visibility: hidden;
+}
+.errorExplanation li {
+list-style: none;
+margin: 0;
+border-bottom: 1px dotted #f06;
+color: #f06;
+text-align: left;
+background: url(/images/silk/icons/error.png) no-repeat 5px top;
+}
+
+/*
+  ###################################################################
+  From niceforms
+  ###################################################################
+ */
+input, textarea {
+font-family: 'HelveticaNeue','Helvetica Neue','Arial',sans-serif;
+font-size: .9em;
+color: #404040;
+}
+label {
+color: #f06;
+cursor: pointer;
+line-height: 1.5em;
+font-family: 'HelveticaNeue','Helvetica Neue','Arial',sans-serif;
+text-transform: uppercase;
+font-size: 0.8em;
+padding-left: 20px;
+vertical-align: top;
+}
+label.chosen {
+color: #333;
+}
+/* Transparent items */
+.outtaHere {
+position: absolute;
+left: -3000px;
+}
+/* Radio buttons */
+.radioArea, .radioAreaChecked {
+display: block;
+float: left;
+clear: left;
+width: 15px;
+height: 14px;
+font-size: 0;
+cursor: pointer;
+}
+.radioArea {
+background: url(/images/niceforms/radio.gif) no-repeat left top;
+}
+.radioAreaChecked {
+background: url(/images/niceforms/radio.gif) no-repeat left bottom;
+}
+/* Checkboxes */
+.checkboxArea, .checkboxAreaChecked {
+display: block;
+float: left;
+clear: left;
+width: 13px;
+height: 13px;
+font-size: 0;
+padding: 0;
+margin: 0;
+cursor: pointer;
+}
+.checkboxArea {
+background: url(/images/niceforms/checkbox.gif) no-repeat left top;
+}
+.checkboxAreaChecked {
+background: url(/images/niceforms/checkbox.gif) no-repeat left bottom;
+}
+.focused {
+border: 1px dotted #ddd;
+}
+/* Text inputs */
+.textinput, .textinputHovered {
+height: 15px;
+background: url(/images/niceforms/input_bg.gif) repeat-x left top;
+border: none;
+padding: 4px 0;
+vertical-align: middle;
+}
+.textinputHovered {
+background-position: left bottom;
+}
+.inputCorner {
+padding-bottom: 0;
+vertical-align: middle;
+}
+/* Text areas */
+.txtarea .tr, .txtarea .tr_xon {
+background: url(/images/niceforms/txtarea_tr.gif) no-repeat top right;
+}
+.txtarea .tr_xon {
+background: url(/images/niceforms/txtarea_tr_xon.gif) no-repeat top right;
+}
+.txtarea img.txt_corner {
+width: 5px;
+height: 5px;
+display: block;
+}
+.txtarea .br, .txtarea .br_xon {
+background: url(/images/niceforms/txtarea_br.gif) no-repeat top right;
+}
+.txtarea .br_xon {
+background: url(/images/niceforms/txtarea_br_xon.gif) no-repeat top right;
+}
+.txtarea .cntr {
+background: url(/images/niceforms/txtarea_cntr.gif) repeat-y right top;
+}
+.txtarea .cntr_xon {
+background: url(/images/niceforms/txtarea_cntr_xon.gif) repeat-y right top;
+}
+.txtarea .cntr_l, .txtarea .cntr_l_xon {
+width: 5px;
+background: url(/images/niceforms/txtarea_l.gif) repeat-y left top;
+float: left;
+}
+.txtarea .cntr_l_xon {
+background: url(/images/niceforms/txtarea_l_xon.gif) repeat-y left top;
+}
+.txtarea textarea {
+border: 0;
+background: none;
+padding: 0;
+margin: 5px;
+}
+/* Selects */
+.selectArea {
+width: 200px;
+height: 21px;
+background: url(/images/niceforms/select_bg.gif) repeat-x left top;
+}
+.selectArea .left {
+width: 8px;
+height: 21px;
+float: left;
+background: url(/images/niceforms/select_left.gif) no-repeat left top;
+}
+.selectArea .right {
+width: 21px;
+height: 21px;
+float: right;
+background: url(/images/niceforms/select_right.gif) no-repeat left top;
+}
+.selectArea .right a {
+display: block;
+width: 200px;
+height: 21px;
+margin-left: -179px;
+position: absolute;
+}
+.selectArea .right i {
+display: none;
+}
+.selectArea .center {
+width: 160px;
+color: #FFF;
+padding-top: 3px;
+overflow: hidden;
+white-space: nowrap;
+}
+/* Selects drop-down */
+.optionsDivInvisible, .optionsDivVisible {
+position: absolute;
+margin-top: -1px;
+margin-left: 3px;
+width: 172px;
+background: #6f7074;
+padding: 2px;
+font-size: 11px;
+z-index: 20;
+}
+.optionsDivInvisible {
+display: none;
+}
+.optionsDivVisible {
+display: block;
+}
+.optionsDivVisible p {
+margin: 0;
+padding: 0;
+}
+.optionsDivVisible a {
+color: #F2F2F2;
+text-decoration: none;
+display: block;
+padding: 1px 4px;
+border: 1px solid #6f7074;
+}
+.optionsDivVisible a:hover {
+color: #FFF;
+background: #5F6062;
+border-color: #cfd0d6;
+}
+/* Button */
+.buttonSubmit, .buttonSubmitHovered {
+width: auto;
+height: 26px;
+color: #FFF;
+text-transform: uppercase;
+padding: 2px;
+background: url(/images/niceforms/button_bg.gif) repeat-x left top;
+cursor: pointer;
+border: none;
+}
+.buttonSubmitHovered {
+background-position: left bottom;
+}
+.buttonImg {
+vertical-align: bottom;
+}
+/*
+  ###################################################################
+  form divs with icons
+  ###################################################################
+ */
+.panel_name, .panel_username, .panel_title, .panel_contents, .panel_signin, .panel_homepage, .panel_password, .panel_password_confirmation, .panel_email, .panel_profile {
+padding: 0;
+margin: 0 0 0.6em 0;
+}
+.panel_name {
+background: url(/images/silk/icons/vcard.png) no-repeat left top;
+}
+.panel_title {
+background: url(/images/silk/icons/page_white_horizontal.png) no-repeat left top;
+}
+.panel_contents_2 {
+background: url(/images/silk/icons/text_heading_1.png) no-repeat left top;
+}
+.panel_email {
+background: url(/images/silk/icons/email.png) no-repeat left top;
+}
+.panel_username {
+background: url(/images/silk/icons/user.png) no-repeat left top;
+}
+.panel_password {
+background: url(/images/silk/icons/key.png) no-repeat left top;
+}
+.panel_homepage {
+background: url(/images/silk/icons/page_world.png) no-repeat left top;
+}
+.panel_password_confirmation {
+background: url(/images/silk/icons/lock_open.png) no-repeat left top;
+}
+.panel_profile {
+background: url(/images/silk/icons/color_swatch.png) no-repeat left top;
+}
+.button_signin {
+padding: 0 0.3em 0 0;
+margin: 0;
+text-align: right;
+}
+/*
+  ###################################################################
+  search form
+  ###################################################################
+ */
+.panel_search_stories {
+background-color: red;
+background: url(/images/silk/icons/news.png);
+height: 90px;
+}
+.panel_search_story {
+padding: 0;
+margin: 0 0 0.6em 0;
+}
+.panel_search_story {
+}
+/*
+  ###################################################################
+  Background related
+  ###################################################################
+ */
+.bg_top {
+width: 760px;
+height: 21px;
+background: url(/images/bg_header.png) no-repeat;
+position: relative;
+}
+.bg_middle {
+background: url(/images/bg_body.png) repeat;
+}
+.bg_footer {
+padding-top: 25px;
+left: 1px;
+background: url(/images/bg_footer.png) repeat;
+position: absolute;
+width: 760px;
+color: #404040;
+font-family: 'HelveticaNeue-Light','Helvetica Neue','Helvetica Neue Light','Arial',sans-serif;
+font-size: 8pt;
+text-align: center;
+display: block;
+}
+/*
+  ###################################################################
+  Common Panels
+  ###################################################################
+ */
+.panel_contents {
+position: relative;
+top: 21px;
+width: 760px;
+}
+.panel_logo {
+position: relative;
+margin-left: 10px;
+width: 760px;
+height: 60px;
+}
+.panel_main {
+position: relative;
+margin: 10px auto;
+width: 760px;
+z-index: 0;
+}
+.panel_search_box {
+font-family: 'HelveticaNeue-Light','Helvetica Neue','Helvetica Neue Light','Arial',sans-serif;
+position: relative;
+color: #666;
+height: 15px;
+text-align: right;
+margin-right: 10px;
+font-size: 1.5em;
+text-transform: uppercase;
+}
+.panel_search_box a {
+color: #666;
+padding: 5px;
+text-decoration: none;
+}
+.panel_search_box a:hover {
+color: #999;
+}
+.panel_stories {
+width: 742px;
+z-index: 0;
+padding-left: 0;
+}
+.panel_stories .container {
+margin-left: 15px;
+margin-right: 15px;
+margin-top: 15px;
+padding-bottom: 15px;
+}
+/*
+  ###################################################################
+  Highlight panel
+  ###################################################################
+ */
+.panel_highlight {
+background-color: #c0c0c0;
+height: 215px;
+position: relative;
+width: 742px;
+z-index: 1;
+}
+.panel_highlight .header {
+height: 28px;
+left: 20px;
+position: relative;
+top: 10px;
+width: 450px;
+z-index: 1;
+}
+.panel_highlight .contents {
+height: 121px;
+left: 20px;
+position: relative;
+top: 10px;
+width: 450px;
+z-index: 1;
+}
+.panel_highlight .note {
+line-height: 22px;
+color: #404040;
+font-family: 'HelveticaNeue-Light','Helvetica Neue','Helvetica Neue Light','Arial',sans-serif;
+font-size: 1.3em;
+margin: 0;
+margin-right: 10px;
+}
+.panel_highlight .photo {
+right: 20px;
+position: absolute;
+top: 10px;
+z-index: 1;
+}
+.panel_highlight .create_account {
+position: absolute;
+top: 170px;
+width: 469px;
+z-index: 2;
+text-align: center;
+}
+/*
+  ###################################################################
+  Other Shared Stuff                                      (xX)-----'-
+  ###################################################################
+ */
+.photo {
+border-color: #fff;
+border-width: 2px;
+border-style: solid;
+}
+.flash_blue, .flash_pink {
+border-color: #eee;
+background: url(/images/bg_code.png);
+border-width: 1px 0px 1px 0px;
+border-style: solid;
+text-transform: uppercase;
+}
+.flash_blue {
+color: #06f;
+}
+.flash_pink {
+font-size: 1.1em;
+color: #f06;
+}
+.icon_separator {
+margin: 0;
+padding: 0;
+border-left: 1px dotted #c0c0c0;
+display: inline;
+}
+.separator_top_dotted {
+width: inherit;
+height: 10px;
+border-top: 1px dotted #c0c0c0;
+}
+.stripes {
+white-space: normal;
+font-size: 1em;
+}
+/*
+  ###################################################################
+  index.html style                                               \#/
+  ###################################################################
+ */
+.panel_main_page_contents {
+margin: 0px;
+margin-bottom: 15px;
+height: 200px;
+}
+.panel_main_page_left {
+padding-top: 0px;
+position: absolute;
+width: 200px;
+height: inherit;
+margin: 0;
+padding: 2px;
+font-size: 1.1em;
+background: url(/images/bg_code.png);
+border-style: solid;
+border-width: 1px 1px 1px 6px;
+border-color: #eee #eee #eee #f06;
+white-space: normal;
+}
+.panel_main_page_left .panel_signin {
+margin: 0 0 1em 0;
+padding: 0;
+}
+.panel_main_page_left .bad_login {
+background: url(/images/silk/icons/exclamation.png) no-repeat left .5em;
+margin: 1.1em;
+padding-left: 1.5em;
+text-align: left;
+font-size: 0.9em;
+font-weight: bold;
+color: #f06;
+text-transform: uppercase;
+}
+.panel_main_page_right {
+position: absolute;
+left: 255px;
+width: 470px;
+height: 170px;
+}
+.container .panel_users {
+position: relative;
+top: 184px;
+left: 230px;
+width: 460px;
+height: 20px;
+text-align: left;
+padding-left: 10px;
+line-height: 20px;
+background: #fafafa url(/images/silk/icons/group.png) no-repeat right 2px;
+border-bottom: 1px solid #eee;
+border-top: 1px solid #eee;
+color: #444;
+vertical-align: middle;
+}
+.panel_main_page_right dt {
+padding-left: 20px;
+background: url(/images/silk/icons/time.png) no-repeat left top;
+}
+/*
+  ###################################################################
+  signup
+  ###################################################################
+ */
+.panel_signup {
+width: 742px;
+z-index: 0;
+padding-left: 0;
+}
+.panel_signup .container {
+margin-left: 15px;
+margin-right: 15px;
+margin-top: 0px;
+padding-bottom: 15px;
+}
+.panel_signup .container .separator_top {
+width: inherit;
+height: 10px;
+border-top: 1px dashed #c0c0c0;
+}
+.panel_error {
+width: 89%;
+}
+.panel_signup_form {
+display: block;
+height: 300px;
+}
+.personal_info {
+position: absolute;
+left: 5em;
+}
+.password_and_confirmation {
+position: absolute;
+left: 400px;
+}
+.panel_submit {
+margin: 0;
+padding: 0;
+text-align: center;
+}
+/*
+  ###################################################################
+  search stuff
+  ###################################################################
+ */
+.search_results {
+text-align: right;
+}
+.search_results h1 {
+font-size: 20pt;
+padding: 0;
+margin: 0;
+}
+.search_results p {
+padding: 0;
+margin: 0;
+}
+.panel_search_stories {
+display: block;
+height: 15em;
+}
+
+.panel_search_stories h1 {
+font-size: 20pt;
+}
+
+.panel_search_stories .left {
+position: absolute;
+left: 5em;
+width: 20em;
+overflow: hidden;
+}
+
+.panel_search_stories .right {
+position: absolute;
+padding-left: 1em;
+left: 25em;
+width: 31.5em;
+overflow: hidden;
+}
+.panel_search_stories ul {
+margin: 0;
+padding: 0;
+}
+.panel_search_stories li {
+padding: 0;
+margin: 0;
+padding-left: 20px;
+font-size: 1em;
+border-style: dotted;
+border-width: 0px 0px 1px 0px;
+border-color: #ddd;
+text-transform: lowercase;
+}
+/*
+  ###################################################################
+  logged in user index
+  ###################################################################
+ */
+.panel_signin_index {
+display: block;
+}
+
+.panel_signin_index h1 {
+font-size: 20pt;
+}
+
+.panel_signin_index .left {
+width: 15em;
+overflow: hidden;
+vertical-align: top;
+text-align: left;
+}
+
+.panel_signin_index .right {
+vertical-align: top;
+padding-left: 1em;
+border-style: dashed;
+border-width: 0px 0px 0px 1px;
+border-color: #ddd;
+left: 17.5em;
+width: 39em;
+overflow: hidden;
+}
+
+.panel_signin_index .right ul, .panel_show_user .right ul, .show_story ul, .render_projects ul {
+line-height: 1.5em;
+font-size: 0.8em;
+background: url(/images/bg_code.png);
+border-style: solid;
+border-width: 1px 6px 6px 1px;
+border-color: #eee #ddd #ddd #eee;
+color: #444;
+display: block;
+font-family: "Monaco", "Lucida Sans Unicode", serif;
+margin: 0;
+margin-top: 5px;
+margin-bottom: 12px;
+padding: 8px 10px;
+}
+
+.panel_show_user .right ul {
+font-size: 1em;
+}
+
+.panel_signin_index .right li, .panel_show_user .right li, .show_story li, .render_projects li {
+display: inline;
+height: 10px;
+}
+
+panel_show_user .right li {
+padding-left: 10px;
+}
+
+.panel_signin_index .left h3 {
+font-size: 1.5em;
+text-align: left;
+}
+.panel_signin_index .left ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.panel_signin_index .left li {
+text-align: left;
+margin: 0;
+padding: 0;
+border-bottom: 1px dotted #EEE;
+background: none;
+}
+.panel_signin_index .left li a {
+color: #888;
+display: block;
+font-size: 1.4em;
+padding: 8px 0;
+}
+
+.panel_signin_index .left li a:hover {
+background: #FAFAFA;
+color: #F06;
+}
+
+/*
+  ###################################################################
+  show user
+  ###################################################################
+ */
+.panel_show_user {
+display: block;
+}
+
+
+.panel_show_user .left {
+padding-left: 3em;
+width: 35em;
+overflow: hidden;
+vertical-align: top;
+text-align: left;
+}
+
+.panel_show_user .left dt {
+border: 0;
+}
+.panel_show_user .right {
+padding-right: 3em;
+vertical-align: top;
+padding-left: 1em;
+border-style: dashed;
+border-width: 0px 0px 0px 1px;
+border-color: #ddd;
+left: 17.5em;
+width: 15em;
+overflow: hidden;
+}
+

@@ -1,0 +1,44 @@
+<div class="panel_signup">
+  <div class="container">
+    <div class="separator_top"/>&nbsp;</div><p/>
+	<code width="80%">Bem-vindo ao e-archia <%= link_to @user.name, utilizador_path(@user.username) %>.
+Não tens <a href="#">mensagens</a> novas!
+Faltam 5 dias para acabar o prazo de entrega do teu <a href="#">próximo trabalho</a>.</code><p/>
+    <div class="panel_signin_index">
+	<table>
+	<tr>
+	  <td class="left">
+	<h3>Perfil</h3>
+	<ul>
+  	  <li><%= link_to 'ver', utilizador_path(@user.username) %></li>
+	  <li><%= link_to 'alterar password', '#' %></li>
+	</ul><br/>
+	<h3>Artigos</h3>
+	<ul>
+	  <li><%= link_to 'novo', novo_artigo_path %></li>
+	  <li><%= link_to 'editar', '#' %></li>
+	  <li><%= link_to 'procurar', search_path %></li>
+	</ul><br/>
+	<h3>TPs</h3>
+	<ul>
+	  <li><%= link_to 'novo', new_project_path %></li>
+	  <li><%= link_to 'procurar', search_path %></li>
+	</ul><br/>
+</td>
+	  <td class="right">
+	   <h1 align="right">Últimas!</h1>
+	<% if flash[:notice] %>
+        <div class="flash_blue"><strong><%= flash[:notice] %></strong></div>
+    <% end %>
+      <% if flash[:error] %>
+        <div class="flash_pink"><strong><%= flash[:error] %></strong></div>
+      <% end %>
+	   <%= render :partial => 'sres', :collection => @stories %>
+	   <p>&nbsp;</p>
+	  </td>
+   </tr>
+  </table>
+<p>&nbsp;</p>
+	</div>	  
+  </div>
+</div>

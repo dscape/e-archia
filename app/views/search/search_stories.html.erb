@@ -1,0 +1,11 @@
+<div class="panel_signup">
+  <div class="container">
+    <div class="separator_top"/>&nbsp;</div><p/>
+	<% unless @stories == [] %>
+	  <%= render :partial => 'info', :locals => { :word => 'artigo'} %>
+	  <%= render :partial => 'sres', :locals => { :subtitle => false }, :collection => @stories %>
+	<% else %>
+	  <%= render :partial => 'zero' %>
+	<% end %>
+  </div>
+</div>

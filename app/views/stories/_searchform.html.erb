@@ -1,0 +1,7 @@
+<% form_tag :controller => 'stories', :action => 'search' do %> 
+	<div class=".panel_search_story">
+		<label for="story">&nbsp;Artigo</label><br/>
+		<%= text_field_tag "story",nil, {:size => 18} %>
+	</div>
+	<%= submit_tag "Procurar" %> 
+<% end %>

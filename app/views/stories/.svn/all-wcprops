@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/ELPI/!svn/ver/14/app/views/stories
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ELPI/!svn/ver/6/app/views/stories/show.html.erb
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ELPI/!svn/ver/6/app/views/stories/search.html.erb
+END
+_searchform.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ELPI/!svn/ver/6/app/views/stories/_searchform.html.erb
+END
+_story.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ELPI/!svn/ver/6/app/views/stories/_story.html.erb
+END
+_searchresults.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ELPI/!svn/ver/6/app/views/stories/_searchresults.html.erb
+END
+_signedin_index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ELPI/!svn/ver/6/app/views/stories/_signedin_index.html.erb
+END
+index.rss.builder
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ELPI/!svn/ver/6/app/views/stories/index.rss.builder
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ELPI/!svn/ver/6/app/views/stories/new.html.erb
+END
+_index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ELPI/!svn/ver/14/app/views/stories/_index.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ELPI/!svn/ver/6/app/views/stories/index.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ELPI/!svn/ver/6/app/views/stories/edit.html.erb
+END

@@ -1,0 +1,3 @@
+<blockquote><%= @quote.quote %>
+<div class="author"><em><%= @quote.author %></em>, <%= @quote.author_bio %></div>
+</blockquote>

@@ -1,0 +1,19 @@
+<div class="panel_signup">
+
+<div class="container">
+<div class="separator_top"/>&nbsp;</div>
+<div style="top:20px">
+<%= render :partial => 'quote', :object => @quote %>
+<center>
+<div class="panel_error">
+	<%= error_messages_for :user %>
+</div>
+</center>
+<% form_for(@user) do |f| %>
+<%= render :partial => 'fields', :locals => { :f => f } %>
+<div class="panel_submit">
+<%= f.submit "Actualizar conta" %> 
+</center>
+<% end %>
+</div>
+</div></div>

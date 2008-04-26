@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/ELPI/!svn/ver/15/app/views/users
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ELPI/!svn/ver/6/app/views/users/show.html.erb
+END
+_quote.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ELPI/!svn/ver/15/app/views/users/_quote.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ELPI/!svn/ver/14/app/views/users/new.html.erb
+END
+_fields.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ELPI/!svn/ver/15/app/views/users/_fields.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ELPI/!svn/ver/14/app/views/users/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ELPI/!svn/ver/6/app/views/users/index.html.erb
+END

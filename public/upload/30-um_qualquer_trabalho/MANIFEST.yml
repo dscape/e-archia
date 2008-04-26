@@ -1,0 +1,104 @@
+global_id: /Volumes/Users/dscape/Sites/e-archia/simplified/public/upload/30-um_qualquer_trabalho/Archive.zip
+local_id: um_qualquer_trabalho
+owner: 2
+titulo: Um qualquer Trabalho
+sub-titulo: Feito num dia de gripe
+acm-classification: tbd
+autores: 
+-Joao
+-Nuno
+-Antonio
+orientadores: 
+-PRH
+-Simoes
+-JJ
+ficheiros:
+-.tmp_dir_struct
+-__MACOSX
+--apresentacao
+---._relatorioTarefas.pdf
+---._responds_to_parent
+---responds_to_parent
+----._init.rb
+----._lib
+----._MIT-LICENSE
+----._Rakefile
+----._README
+----._test
+----lib
+-----._parent_selector_assertion.rb
+-----._responds_to_parent.rb
+----test
+-----._assert_select_parent_test.rb
+-----._responds_to_parent_test.rb
+--codigo
+---._.DS_Store
+---._Archive(2)
+---._Archive(2).zip
+---._responds_to_parent.tgz
+---Archive(2)
+----._relatorioTarefas.pdf
+----._responds_to_parent
+----._responds_to_parent.tgz
+----._tasks.todo
+----._WHOQOL- questiona첁rio adaptado portugue첂s.doc
+----responds_to_parent
+-----._init.rb
+-----._lib
+-----._MIT-LICENSE
+-----._Rakefile
+-----._README
+-----._test
+-----lib
+------._parent_selector_assertion.rb
+------._responds_to_parent.rb
+-----test
+------._assert_select_parent_test.rb
+------._responds_to_parent_test.rb
+--relatorio
+---._.DS_Store
+---._multiple-file-element.zip
+---._WHOQOL- questiona첁rio adaptado portugue첂s.doc
+-apresentacao
+--relatorioTarefas.pdf
+--responds_to_parent
+---init.rb
+---lib
+----parent_selector_assertion.rb
+----responds_to_parent.rb
+---MIT-LICENSE
+---Rakefile
+---README
+---test
+----assert_select_parent_test.rb
+----responds_to_parent_test.rb
+-Archive.zip
+-codigo
+--.DS_Store
+--Archive(2)
+---LICENSE
+---MANIFEST
+---relatorioTarefas.pdf
+---responds_to_parent
+----init.rb
+----lib
+-----parent_selector_assertion.rb
+-----responds_to_parent.rb
+----MIT-LICENSE
+----Rakefile
+----README
+----test
+-----assert_select_parent_test.rb
+-----responds_to_parent_test.rb
+---responds_to_parent.tgz
+---tasks.todo
+---WHOQOL- questiona첁rio adaptado portugue첂s.doc
+--Archive(2).zip
+--Archive.zip
+--responds_to_parent.tgz
+-relatorio
+--.DS_Store
+--lixo.txt
+--multiple-file-element.zip
+--WHOQOL- questiona첁rio adaptado portugue첂s.doc
+

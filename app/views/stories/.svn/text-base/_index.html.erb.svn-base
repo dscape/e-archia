@@ -1,0 +1,60 @@
+<div class="panel_highlight">
+  <div class="header">
+    <h1> Os teus trabalhos à distância de um click </h1>
+  </div>
+  <div class="contents">
+    <p class="note"> Não estás farto de andar sempre à procura daquele trabalho que
+      fizeste há dois anos? No e-archia tens todos os teus trabalhos disponiveis. Os
+      teus professores vão avaliá-los por aqui, podes partilhá-los com os teus amigos e
+      aprender com o que os outros fizeram. Regista-te e vê o que tens andando a perder!
+    </p>
+  </div>
+
+  <img src="/images/main.jpg" alt="Biblioteca da Universidade do Minho - Polo Braga"
+    width="250px" class="photo"/>
+  <div class="create_account">
+    <a href="<%= signup_path %>"><img src="/images/create_button.png" alt="Criar uma nova conta"/></a>
+  </div>
+</div>
+
+<div class="panel_stories">
+
+  <div class="container">
+    <div class="panel_main_page_contents">
+      <div class="panel_main_page_left">
+		<div class="panel_signin">
+        <img src="/images/signin.png" alt="Entrar"/>
+		</div>
+
+		<% form_tag :controller => 'session', :action => 'signin' do %> 
+		<div class="panel_username">
+		<label for="username">&nbsp;Nome de Utilizador</label><br/>
+		<%= text_field_tag "username",nil, {:size => 18} %></div>
+		<div class="panel_password">
+		<label for="password">&nbsp;Palavra Passe</label><br/>
+		<%= password_field_tag "password",nil, {:size => 18} %>
+		</div>
+		<div class="button_signin">
+		<%= submit_tag "Entrar no e-archia" %> 
+		</div>
+		<% unless flash[:error].blank? %>
+		<div class="bad_login"><%= flash[:error] %><br/><small>Podes-te inscrever <a href="<%= signup_path %>">aqui</a></small></div>
+		<% end %>
+		<% end %>
+		
+      </div>
+      <div class="panel_main_page_right">
+        <h4><img src="/images/silk/icons/newspaper.png" alt="Últimas"/>&nbsp;Últimas</h4>
+        <dl>
+		  <%= render :partial => 'story', :collection => @stories %>
+        </dl>
+      </div>
+      <div class="panel_users"> 	<% if flash[:notice] %>
+        <div id="flash_blue"><%= flash[:notice] %></div>
+      <% elsif flash[:error] %>
+        <div id="flash_pink"><%= flash[:error] %></div>
+      <% else %>o <a href="">leonardo</a> é um dos nossos <a>10
+          utilizadores</a> actualmente ligados. </div>
+      <% end %>
+    </div>
+  </div>

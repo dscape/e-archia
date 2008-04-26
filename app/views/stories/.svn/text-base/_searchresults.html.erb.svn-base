@@ -1,0 +1,21 @@
+<h1>Search results</h1>
+<center>
+
+<table width="90%" style="border: #CCC solid 1px;">
+  <tr>
+    <th width="30%">Title</th>
+    <th width="35%">Contents</th>
+    <th width="20%">Permalink</th>
+		<th width="5%">Show</th>
+  </tr>
+
+<% for story in @stories %>
+  <tr>
+    <td align="center"><%=h story.title %></td>
+    <td align="center"><%=h story.contents %></td>
+    <td align="center"><%=h story.permalink %></td>
+    <td align="center"><%= link_to 'V', story %></td>
+  </tr>
+<% end %>
+</table>
+<br/>

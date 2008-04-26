@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/ELPI/!svn/ver/15/test/unit
+END
+right_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/ELPI/!svn/ver/8/test/unit/right_test.rb
+END
+user_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/ELPI/!svn/ver/8/test/unit/user_test.rb
+END
+file_container_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ELPI/!svn/ver/15/test/unit/file_container_test.rb
+END
+story_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/ELPI/!svn/ver/8/test/unit/story_test.rb
+END
+project_entry_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ELPI/!svn/ver/16/test/unit/project_entry_test.rb
+END
+quote_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ELPI/!svn/ver/15/test/unit/quote_test.rb
+END
+role_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/ELPI/!svn/ver/8/test/unit/role_test.rb
+END
+container_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ELPI/!svn/ver/16/test/unit/container_test.rb
+END
+course_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ELPI/!svn/ver/15/test/unit/course_test.rb
+END
+subject_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ELPI/!svn/ver/15/test/unit/subject_test.rb
+END
+project_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ELPI/!svn/ver/15/test/unit/project_test.rb
+END
+avatar_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ELPI/!svn/ver/15/test/unit/avatar_test.rb
+END

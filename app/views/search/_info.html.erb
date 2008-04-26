@@ -1,0 +1,8 @@
+<div style="display:block;" class="search_results">
+  <h1>Hooray!</h1>
+  <p>
+    Procuraste por <%= word.pluralize %> que contém a frase "<%= params[:query].to_s %>".<br/>
+   <em><%= pluralize(@size,word) %></em>
+  </p><br/>
+  <div class="separator_top_dotted"/>&nbsp;</div>
+</div>

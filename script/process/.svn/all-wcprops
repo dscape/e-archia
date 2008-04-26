@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/ELPI/!svn/ver/8/script/process
+END
+spawner
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/ELPI/!svn/ver/8/script/process/spawner
+END
+reaper
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/ELPI/!svn/ver/8/script/process/reaper
+END
+inspector
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ELPI/!svn/ver/8/script/process/inspector
+END

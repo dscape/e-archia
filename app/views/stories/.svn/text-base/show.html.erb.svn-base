@@ -1,0 +1,14 @@
+<p>
+  <b>Title:</b>
+  <%=h @story.title %>
+</p>
+
+<p>
+  <b>Contents:</b>
+  <%=h @story.contents %>
+</p>
+
+<p>
+  <b>Permalink:</b>
+  <%=h @story.permalink %>
+</p>

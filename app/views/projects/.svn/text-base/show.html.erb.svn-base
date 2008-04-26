@@ -1,0 +1,22 @@
+<p>
+  <b>Title:</b>
+  <%=h @project.title %>
+</p>
+
+<p>
+  <b>Subtitle:</b>
+  <%=h @project.subtitle %>
+</p>
+
+<p>
+  <b>Permalink:</b>
+  <%=h @project.permalink %>
+</p>
+
+<p>
+  <b>Contents:</b>
+  <%=h @project.contents %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

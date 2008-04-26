@@ -1,0 +1,46 @@
+<div class="panel_signup">
+  <div class="container">
+    <div class="separator_top"/>&nbsp;</div><p/>
+	<div style="top:20px">
+	  <%= render :partial => 'quote', :object => @quote %>
+	  <div class="panel_show_user">
+	    <table>
+	      <tr>
+	        <td class="left">
+	          <h1>Perfil</h1>
+	          <% if @projects.size > 0 %>
+	          <p/>
+	          <h1><%= pluralize @projects.size, 'TP'%></h1>
+              <%= render :partial => 'entry', :locals => { :story => false }, :collection => @projects %>
+	          <% end %>
+	          <% if @stories.size > 0 %>
+	          <p/>
+	          <h1><%= pluralize @stories.size, 'Artigo'%></h1>
+		      <%= render :partial => 'entry', :locals => { :story => true }, :collection => @stories %>
+	          <% end %>
+	        </td>
+	        <td class="right">
+	            <ul>
+		          <h1 align="right">Ficha</h1>
+                  <li style="background: url(/images/silk/icons/user.png) no-repeat left top;">
+                    <%=h @user.name %> is <strong><%=h @user.username %></strong><p/>
+                  </li>
+                  <li style="background: url(/images/silk/icons/email.png) no-repeat left top;">
+                    <%=h @user.email.gsub('@',' [em] ').gsub('.',' [ponto] ') %><p/>
+                  </li>
+                  <% if @user.homepage %>
+                  <li style="background: url(/images/silk/icons/world.png) no-repeat left top;">
+                    <%= link_to 'página web', @user.homepage %><p/>
+                  </li>
+                  <% end %>
+                  <% if @user.openid %>
+                  <li style="background: url(/images/silk/icons/lock.png) no-repeat left top;">
+                    <%= link_to 'open-id', @user.openid %>
+                  </li>
+                  <% end %>
+              </ul>
+	        </td>
+	      </tr>
+	    </table>
+</div>
+</div></div>

@@ -1,0 +1,10 @@
+ Q1: Disseminação
+
+Em relação ao trabalho desenvolvido, é necessário completar o ciclo de vida de um arquivo com a disseminação de pacotes. Assim, após a pesquisa de um trabalho prático (e de o utilizador ter encontrado o trabalho em causa), deve ser possível:
+
+    * descarregar cada trabalho prático num ZIP completo;
+    * descarregar um ZIP com o Relatório (ou apresentação, ou código)
+    * Para ajudar a selecção do conteúdo que se quer descarregar, deve ser possível
+          o navegar interactivamente sobre o filesystem do Trabalho Prático, acedendo on-line à árvore de directorias, e vizualização de ficheiros. 
+
+    * DIPs.pdf: Slides sobre DIPs 

@@ -1,0 +1,9 @@
+<dd><% if story %>
+<%= link_to entry.title,
+          artigo_path(entry.permalink) %>
+<% else %>
+<%= link_to entry.title,
+          project_path(entry.id) %>
+<% end %>
+</dd>
+<dt> actualizado <%= Util.timeago(entry.updated_at) %></dt>

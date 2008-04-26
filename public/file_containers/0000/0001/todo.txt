@@ -1,0 +1,32 @@
+Prioridades:
+------------
+- Add avatar e profile to users
+- Falta espaço para os notices e errors na main page
+- Por ler mais artigos na mainpage
+- No logo meter o que é por baixo (Arquivo digital de trabalhos prácticos)
+- Only users can edit/delete own stories (and root)
+- Only users can edit/delete their own profile (and root)
+- Layout for users (see advaced layouting on screencast)
+- Layout for stories
+- Project submission	(3 advanced forms course on railscast, maybe cookbooks)
+- Browse projects
+- Search projects	(simple search form in railscasts)
+
+Minor issues:
+-------------
+- Espaçamento entre artigos na main page insuf
+- Erro de login pouco legivel
+- Demasiado texto na introdução
+- Ver sharing for usability?
+- Ver flickr
+- Ver youtube
+- Ver google
+- Cookies? (railscast)
+- Openid (railscast)
+- pdf documents for printing (railscast)
+- using yaml for internationalization. get strings out of the controller/views to a yaml file and then read them from there so users can easily change the site with one text file only (images not included)
+- titulo faz mau uso de ceo. nao tem o titulo da pagina onde ta em cima
+- o signin index tam com um problema de tamanho. aumenta.
+- na pagina do user o root pode desactivar o perfil
+-na search tem bug no link para projectos esta a usar o routes dos artigos
+-link to files

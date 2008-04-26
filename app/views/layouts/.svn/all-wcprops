@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/ELPI/!svn/ver/15/app/views/layouts
+END
+projects.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ELPI/!svn/ver/15/app/views/layouts/projects.html.erb
+END
+courses.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ELPI/!svn/ver/15/app/views/layouts/courses.html.erb
+END
+application.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ELPI/!svn/ver/14/app/views/layouts/application.html.erb
+END
+subjects.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ELPI/!svn/ver/15/app/views/layouts/subjects.html.erb
+END
+file_containers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ELPI/!svn/ver/15/app/views/layouts/file_containers.html.erb
+END
+containers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ELPI/!svn/ver/16/app/views/layouts/containers.html.erb
+END
+project_entries.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ELPI/!svn/ver/16/app/views/layouts/project_entries.html.erb
+END
+avatars.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ELPI/!svn/ver/15/app/views/layouts/avatars.html.erb
+END

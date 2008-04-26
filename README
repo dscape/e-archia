@@ -1,0 +1,50 @@
+Prioridades:
+------------
+- Browse projects
+- Search projects	(simple search form in railscasts)
+- Procura layout por item (users, artigos, trabalhos)
+
+- página inicial com nav e stories.
+
+- users com os seus trabalhos no perfil
+- projects com as suas entries no perfil
+- entries com os seus files.
+
+Prioridade normal:
+-----------------
+- Tratar das migrações ao promenor.
+- Tratar dos modelos ao promenor.
+- Tratar da tabela de routing toda.
+- N users tens n grupos, não n user tem 1 grupos
+- Groupid is defaulting to 1. shouldnt be
+- Containers para cada trabalho não ta implementado
+- Read Social Networks on Rails
+- Add avatar e profile to users
+- Por ler mais artigos na mainpage
+- Only users can edit/delete own stories (and root)
+- Only users can edit/delete their own profile (and root)
+- Layout for users (see advaced layouting on screencast)
+- Layout for stories
+
+Minor issues:
+-------------
+- No logo meter o que é por baixo (Arquivo digital de trabalhos prácticos)
+- Espaçamento entre artigos na pagina principal é insuficiente.
+- Erro de login pouco legivel
+- Demasiado texto na introdução
+- Ver sharing for usability?
+- Ver flickr
+- Ver youtube
+- Ver google
+- Cookies? (railscast)
+- Openid (railscast)
+- pdf documents for printing (railscast)
+- using yaml for internationalization. get strings out of the controller/views to a yaml file and then read them from there so users can easily change the site with one text file only (images not included)
+- automatizacao no processo de criacao de noticias.
+novo projecto. nova entrada. edit a uma entrada. etc
+- enable edits from user profile if he can edit (is self)
+- bug nas horas quando é para o futuro
+- falta descricoes (caixas de texto) nos icons da navegacao. assim ng sabe o que é o que diz a paula e mt bem
+- correct for eager loading. fetch separado por coisa é mau. include é amigo.
+- delete all mass assignment. cant trust users input params. attr acessible aos que podem ser feitos
+- disable html tags in fields. or else we get scripts e tal.

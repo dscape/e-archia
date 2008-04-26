@@ -1,0 +1,21 @@
+<div class="panel_signup">
+  <div class="container">
+    <div class="separator_top"/>&nbsp;</div><p/>
+<h1>Editar Projecto</h1>
+
+<%= error_messages_for :project %>
+
+<% form_for @project, :html => {:multipart => true} do |f| %>
+<%= render :partial => 'fields',  :locals => { :f => f } %>
+
+<p>
+  <p>
+    <%= f.submit "Actualizar" %>
+  </p>
+<% end %>
+
+<%= link_to 'Mostrar', @project %> |
+<%= link_to 'Voltar', projects_path %>
+</div>
+</div>
+</div>

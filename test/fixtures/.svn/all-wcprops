@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/ELPI/!svn/ver/15/test/fixtures
+END
+avatars.yml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ELPI/!svn/ver/15/test/fixtures/avatars.yml
+END
+subjects.yml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ELPI/!svn/ver/15/test/fixtures/subjects.yml
+END
+project_entries.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ELPI/!svn/ver/16/test/fixtures/project_entries.yml
+END
+file_containers.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ELPI/!svn/ver/15/test/fixtures/file_containers.yml
+END
+quotes.yml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ELPI/!svn/ver/15/test/fixtures/quotes.yml
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/ELPI/!svn/ver/8/test/fixtures/users.yml
+END
+containers.yml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ELPI/!svn/ver/16/test/fixtures/containers.yml
+END
+courses.yml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ELPI/!svn/ver/15/test/fixtures/courses.yml
+END
+rights.yml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ELPI/!svn/ver/8/test/fixtures/rights.yml
+END
+projects.yml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ELPI/!svn/ver/15/test/fixtures/projects.yml
+END
+stories.yml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ELPI/!svn/ver/8/test/fixtures/stories.yml
+END
+roles.yml
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/ELPI/!svn/ver/8/test/fixtures/roles.yml
+END

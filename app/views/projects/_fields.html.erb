@@ -1,0 +1,28 @@
+<p>
+  <b>Titulo</b><br />
+  <%= f.text_field :title %>
+</p>
+<p>
+  <b>Sub-titulo</b><br />
+  <%= f.text_field :subtitle %>
+</p>
+
+<p>
+  <b>Licença</b><br />
+  <%= f.text_area :contents %>
+</p>
+
+<p>
+  <b>Autores (um por linha)</b><br />
+  <%= f.text_area :authors %>
+</p>
+
+<p>
+  <b>Orientadores (um por linha)</b><br />
+  <%= f.text_area :supervisors %>
+</p>
+
+<p>
+  <b>Ficheiro zip</b><br />
+  <%= f.file_field :file %>
+</p>

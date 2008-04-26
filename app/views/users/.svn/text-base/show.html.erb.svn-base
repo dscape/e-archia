@@ -1,0 +1,24 @@
+<p>
+  <b>Username:</b>
+  <%=h @user.username %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @user.email.gsub('@','[em]').gsub('.','[ponto]') %>
+</p>
+
+<p>
+  <b>Homepage:</b>
+  <%=h @user.homepage %>
+</p>
+
+<p>
+  <b>Openid:</b>
+  <%=h @user.openid %>
+</p>

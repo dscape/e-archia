@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/ELPI/!svn/ver/15/test/functional
+END
+containers_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ELPI/!svn/ver/16/test/functional/containers_controller_test.rb
+END
+file_containers_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ELPI/!svn/ver/15/test/functional/file_containers_controller_test.rb
+END
+session_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ELPI/!svn/ver/8/test/functional/session_controller_test.rb
+END
+avatars_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ELPI/!svn/ver/15/test/functional/avatars_controller_test.rb
+END
+subjects_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ELPI/!svn/ver/15/test/functional/subjects_controller_test.rb
+END
+users_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ELPI/!svn/ver/8/test/functional/users_controller_test.rb
+END
+courses_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ELPI/!svn/ver/15/test/functional/courses_controller_test.rb
+END
+projects_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ELPI/!svn/ver/15/test/functional/projects_controller_test.rb
+END
+project_entries_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ELPI/!svn/ver/16/test/functional/project_entries_controller_test.rb
+END
+stories_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ELPI/!svn/ver/8/test/functional/stories_controller_test.rb
+END

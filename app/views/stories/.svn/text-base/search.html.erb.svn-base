@@ -1,0 +1,5 @@
+<% unless request.post? %>
+	<%= render :partial => 'searchform' %>
+<% else %>
+	<%= render :partial => 'searchresults' %>
+<% end %>

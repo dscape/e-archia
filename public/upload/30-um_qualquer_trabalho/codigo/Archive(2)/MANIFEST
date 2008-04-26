@@ -1,0 +1,48 @@
+global_id: /Volumes/Users/dscape/Sites/e-archia/simplified/public/upload/26-merda_de_trabalho/Archive.zip
+local_id: merda_de_trabalho
+owner: 2
+titulo: Merda de Trabalho
+sub-titulo: fdgdfgdfg
+acm-classification: tbd
+autores: 
+  -joao
+  -zermel
+orientadores: 
+  -lixo
+ficheiros:
+-__MACOSX
+--._relatorioTarefas.pdf
+--._responds_to_parent
+--._responds_to_parent.tgz
+--._tasks.todo
+--._WHOQOL- questiona첁rio adaptado portugue첂s.doc
+--responds_to_parent
+---._init.rb
+---._lib
+---._MIT-LICENSE
+---._Rakefile
+---._README
+---._test
+---lib
+----._parent_selector_assertion.rb
+----._responds_to_parent.rb
+---test
+----._assert_select_parent_test.rb
+----._responds_to_parent_test.rb
+-Archive.zip
+-relatorioTarefas.pdf
+-responds_to_parent
+--init.rb
+--lib
+---parent_selector_assertion.rb
+---responds_to_parent.rb
+--MIT-LICENSE
+--Rakefile
+--README
+--test
+---assert_select_parent_test.rb
+---responds_to_parent_test.rb
+-responds_to_parent.tgz
+-tasks.todo
+-WHOQOL- questiona첁rio adaptado portugue첂s.doc
+
