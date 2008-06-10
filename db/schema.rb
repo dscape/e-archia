@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 5) do
+ActiveRecord::Schema.define(:version => 6) do
 
   create_table "projects", :force => true do |t|
     t.integer  "user_id",                     :default => 1, :null => false
@@ -93,5 +93,13 @@ ActiveRecord::Schema.define(:version => 5) do
 
   add_index "users", ["email"], :name => "index_users_on_email"
   add_index "users", ["username"], :name => "index_users_on_username"
+
+  create_table "words", :force => true do |t|
+    t.string   "word"
+    t.string   "filepath"
+    t.integer  "weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

@@ -42,6 +42,10 @@ ActionController::Routing::Routes.draw do |map|
   map.search_projects '/procurar/trabalho',
   :controller => 'search',
   :action => 'search_projects'
+  
+  map.search_files '/procurar/ficheiros',
+  :controller => 'search',
+  :action => 'search_files'
 
   # ==========================================================================
   # users controller

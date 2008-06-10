@@ -1,0 +1,81 @@
+Information Retrieval using Boolean Model in Ruby on Rails
+
+
+Nuno Job
+26 de Maio de 2008
+Information Retrieval using Boolean Model
+Método de obter resultados numa pesquisa baseado em modelos booleanos.
+Associação das palavras, ao resultado, com base numa formula.
+Critérios de ponderação disponíveis em base de dados  - Número de ocorrências.
+Várias frameworks de IR disponíveis: Spynx, Ferret, ... Ask Google.
+3 simples passos de indexação
+Era uma vez num reino muito distante uma princesa chamada Eduarda.
+E a pesquisa?
+Obter as ocorrências que satisfazem cada predicado : A AND B OR NOT C (A,B,C Sets)
+Ou por uma complicada statement SQL + PerformanceOu obter tudo e usar uma linguagem de scripting + Versatilidade
+MapReduce!?  
+Arquitectura (?) usada pela Google para combater este problema de eficiência vs versatilidade. (e muitos outros)
+Plataforma distribuída de computação.
+Um/vários mestre e vários workers
+Função map de cada worker processa “um bocado” de um documento enorme.
+Função reduce cria a partir dos maps parciais o resultado final. 
+Afinal as linguagens funcionais servem para alguma coisa. Os compiladores e a engenharia de linguagens também, mas não digam a ninguém.. 
+Exemplo: os desafios que as linguagens dinâmicas trazem aos compiladores tradicionais
+MapReduce - Esquema
+Porque é que nos interessa uma boa arquitectura? (ie: google twitter scaling architecture)
+
+Step by Step on Ruby on Rails
+Do it yourself em 15 minutos (paleio incluido, será que tenho assim tanto tempo?)
+
+Despreza-se as várias formas de uma palavra. Para efeitos práticos deve ser considerado.(exemplo: procura != procurar )
+Criar o projecto e os modelos
+O que são modelos? (wiki model view controller)Camada computacional responsavel pela ligação entre a aplicação e a base de dados
+
+Criar a base de dados
+Inserir um documento
+Mas....
+Inserimos o documento sem processar as palavras?
+
+Para que a procura seja eficiente é necessário que a indexação seja feita não aquando da sua criação mas num esquema de fila de espera. A arquitectura importa!
+
+Para simplificar, indexamos aquando da criação. 
+
+Mas e se o fizéssemos numa aplicação real com milhares de request por segundo?
+Depois da criação, Indexar!
+after_create? before_save?
+Vamos experimentar
+E.. Funcionou?
+A pesquisa
+Com a informação disponivel em BD como conseguir processar pesquisas?
+
+Implementação Trivial
+
+Mas tem um pequeno problema no modelo de dados (para os mais atentos...)
+O Problema
+Quando definimos na base de dados o id do documento fica em document e não em document_id
+
+Apesar de ser possivel usar assim, os principios de convention over configuration sugerem a alteração
+
+Para simplificar vamos continuar assim, mas...
+A relação funciona?
+A pesquisa (bugs fixed)
+Parece apropriado que seja o modelo dos documentos que faça a pesquisa devolvendo os documentos ordenados pelo peso.
+
+Pode também vir a ser necessário uma pesquisa complementar.Exemplo: Existe a palavra neste documento?
+Mãos na massa...
+Os operadores
+Já temos uma forma de descobrir quais os documentos que têm dada palavra.
+Faltam as operações.
+AND? OR? NOT?
+
+AND por defeito. NOT como -.
+Primeira tentativa
+
+
+
+
+
+
+
+
+O documento 4 é claramento o que devia aparecer em primeiro. Mas como?

@@ -1,0 +1,557 @@
+  [4;36;1mSQL (0.000212)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.002945)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.002458)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000383)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateWords (1)
+  [4;35;1mSQL (0.003819)[0m   [0mCREATE TABLE words ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "word" varchar(255) DEFAULT NULL, "document" varchar(255) DEFAULT NULL, "weight" integer DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.002788)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000549)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateDocuments (2)
+  [4;36;1mSQL (0.002540)[0m   [0;1mCREATE TABLE documents ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL, "contents" text DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.002675)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000366)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000415)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mPRAGMA index_list(documents)[0m
+  [4;35;1mSQL (0.000090)[0m   [0mPRAGMA index_list(words)[0m
+  [4;36;1mSQL (0.000211)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000165)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000188)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateDocuments (2)
+  [4;36;1mSQL (0.002621)[0m   [0;1mDROP TABLE documents[0m
+  [4;35;1mSQL (0.002726)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000583)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateWords (1)
+  [4;35;1mSQL (0.002925)[0m   [0mDROP TABLE words[0m
+  [4;36;1mSQL (0.002437)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000362)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000295)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000211)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000221)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateWords (1)
+  [4;36;1mSQL (0.003143)[0m   [0;1mCREATE TABLE words ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "word" varchar(255) DEFAULT NULL, "document" varchar(255) DEFAULT NULL, "weight" integer DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.002704)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000546)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateDocuments (2)
+  [4;35;1mSQL (0.002615)[0m   [0mCREATE TABLE documents ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL, "contents" text DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.003437)[0m   [0;1mUPDATE schema_info SET version = 2[0m
+  [4;35;1mSQL (0.000420)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000483)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000107)[0m   [0mPRAGMA index_list(documents)[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mPRAGMA index_list(words)[0m
+  [4;36;1mDocument Create (0.000423)[0m   [0;1mINSERT INTO documents ("name", "updated_at", "contents", "created_at") VALUES('pam.txt', '2008-05-24 20:10:12', 'This is an introductory work to Plugglable Authentication Modules (PAM) in 
+Linux from the System Administrator and Application Developer point of view. 
+s also a brief approach on security issues and module development in PAM. There
+A short practical example of a PAM-aware application is provided. 
+', '2008-05-24 20:10:12')[0m
+  [4;35;1mDocument Load (0.000533)[0m   [0mSELECT * FROM documents LIMIT 1[0m
+  [4;36;1mDocument Load (0.001476)[0m   [0;1mSELECT * FROM documents LIMIT 1[0m
+  [4;35;1mDocument Load (0.000480)[0m   [0mSELECT * FROM documents LIMIT 1[0m
+  [4;36;1mDocument Load (0.000488)[0m   [0;1mSELECT * FROM documents LIMIT 1[0m
+  [4;35;1mDocument Load (0.000487)[0m   [0mSELECT * FROM documents LIMIT 1[0m
+  [4;36;1mDocument Load (0.000530)[0m   [0;1mSELECT * FROM documents LIMIT 1[0m
+  [4;35;1mDocument Load (0.000478)[0m   [0mSELECT * FROM documents LIMIT 1[0m
+  [4;36;1mDocument Load (0.000484)[0m   [0;1mSELECT * FROM documents LIMIT 1[0m
+  [4;35;1mDocument Load (0.000490)[0m   [0mSELECT * FROM documents LIMIT 1[0m
+  [4;36;1mDocument Load (0.000480)[0m   [0;1mSELECT * FROM documents LIMIT 1[0m
+  [4;35;1mDocument Load (0.000483)[0m   [0mSELECT * FROM documents LIMIT 1[0m
+  [4;36;1mSQL (0.000565)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mDocument Create (0.000559)[0m   [0mINSERT INTO documents ("name", "updated_at", "contents", "created_at") VALUES('somename.txt', '2008-05-24 22:52:47', 'After posting blog entries I like to log into my Google Webmaster Tools and force a re-download of my site map to cut down on the time it takes to be indexed. Normally this is a manual process, but it is pretty simple to automate. I develop with Ruby on Rails and host on a Linux server but the same strategy could easily be applied to other environments.', '2008-05-24 22:52:47')[0m
+  [4;36;1mDocument Create (0.000520)[0m   [0;1mINSERT INTO documents ("name", "updated_at", "contents", "created_at") VALUES('somename.txt', '2008-05-24 22:53:40', 'After posting blog entries I like to log into my Google Webmaster Tools and force a re-download of my site map to cut down on the time it takes to be indexed. Normally this is a manual process, but it is pretty simple to automate. I develop with Ruby on Rails and host on a Linux server but the same strategy could easily be applied to other environments.', '2008-05-24 22:53:40')[0m
+  [4;36;1mDocument Create (0.000400)[0m   [0;1mINSERT INTO documents ("name", "updated_at", "contents", "created_at") VALUES('somename.txt', '2008-05-24 22:53:52', 'After posting blog entries I like to log into my Google Webmaster Tools and force a re-download of my site map to cut down on the time it takes to be indexed. Normally this is a manual process, but it is pretty simple to automate. I develop with Ruby on Rails and host on a Linux server but the same strategy could easily be applied to other environments.', '2008-05-24 22:53:52')[0m
+  [4;35;1mSQL (0.000248)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mWord Create (0.000155)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'simple', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'force', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000086)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'into', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'rails', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000084)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 2, 'but', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 2, 'and', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000083)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'easily', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000269)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'linux', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000090)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'normally', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000097)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'time', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000121)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'down', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000155)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'cut', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000164)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'blog', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000124)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'posting', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000097)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'pretty', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'webmaster', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000086)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'log', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'could', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000093)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'takes', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'tools', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000089)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'like', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000086)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'same', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'manual', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 2, 'the', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000086)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'map', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 're-download', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000086)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'after', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'environments.', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000086)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'applied', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000084)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'server', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000084)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'develop', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000086)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'process,', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000084)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'indexed.', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'site', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'google', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000089)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'strategy', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'host', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000084)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'ruby', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'automate.', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'this', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'other', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mWord Create (0.000088)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'entries', 2, '2008-05-24 22:53:52')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 22:53:52', 1, 'with', 2, '2008-05-24 22:53:52')[0m
+  [4;35;1mDocument Delete all (0.003021)[0m   [0mDELETE FROM documents WHERE 1=1[0m
+  [4;36;1mWord Delete all (0.002488)[0m   [0;1mDELETE FROM words WHERE 1=1[0m
+  [4;35;1mDocument Create (0.000528)[0m   [0mINSERT INTO documents ("name", "updated_at", "contents", "created_at") VALUES('somename.txt', '2008-05-24 23:28:10', 'After posting blog entries I like to log into my Google Webmaster Tools and force a re-download of my site map to cut down on the time it takes to be indexed. Normally this is a manual process, but it is pretty simple to automate. I develop with Ruby on Rails and host on a Linux server but the same strategy could easily be applied to other environments.', '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000166)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'simple', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000118)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'force', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000129)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'into', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000104)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'rails', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000113)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 2, 'but', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000104)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 2, 'and', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'easily', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000084)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'linux', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'normally', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000084)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'time', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000084)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'down', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000110)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'cut', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000105)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'blog', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000139)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'posting', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000176)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'pretty', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000134)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'webmaster', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000320)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'log', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000094)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'could', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000115)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'takes', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000086)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'tools', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000086)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'like', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'same', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000084)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'manual', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 2, 'the', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'map', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000086)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 're-download', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000084)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'after', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000094)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'environments.', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'applied', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'server', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'develop', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'process,', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000089)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'indexed.', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000084)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'site', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000100)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'google', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000158)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'strategy', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000125)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'host', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000115)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'ruby', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000097)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'automate.', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000089)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'this', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.003197)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'other', 3, '2008-05-24 23:28:10')[0m
+  [4;35;1mWord Create (0.000122)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'entries', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mWord Create (0.000090)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:28:10', 1, 'with', 3, '2008-05-24 23:28:10')[0m
+  [4;36;1mDocument Delete all (0.003045)[0m   [0;1mDELETE FROM documents WHERE 1=1[0m
+  [4;35;1mWord Delete all (0.004084)[0m   [0mDELETE FROM words WHERE 1=1[0m
+  [4;36;1mDocument Delete all (0.001866)[0m   [0;1mDELETE FROM documents WHERE 1=1[0m
+  [4;35;1mWord Delete all (0.001545)[0m   [0mDELETE FROM words WHERE 1=1[0m
+  [4;36;1mDocument Delete all (0.001852)[0m   [0;1mDELETE FROM documents WHERE 1=1[0m
+  [4;35;1mDocument Create (0.000528)[0m   [0mINSERT INTO documents ("name", "updated_at", "contents", "created_at") VALUES('somename.txt', '2008-05-24 23:30:11', '--- 
+- "After posting blog entries I like to log into my Google Webmaster Tools and force a re download of my site map to cut down on the time it takes to be indexed Normally this is a manual process but it is pretty simple to automate I develop with Ruby on Rails and host on a Linux server but the same strategy could easily be applied to other environments "
+', '2008-05-24 23:30:11')[0m
+  [4;36;1mSQL (0.000387)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mWord Create (0.000192)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'environments', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000096)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'simple', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000093)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'force', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000093)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'into', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000095)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'rails', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000098)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 2, 'but', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000099)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'download', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000110)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 2, 'and', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000095)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'easily', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000088)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'linux', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'normally', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000084)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'time', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000084)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'down', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000112)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'cut', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000091)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'blog', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000086)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'posting', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000086)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'pretty', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000142)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'process', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000095)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'webmaster', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000089)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'log', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000090)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'could', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000088)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'takes', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000088)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'tools', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000099)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'like', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000153)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'same', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000093)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'manual', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000103)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'indexed', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000109)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 2, 'the', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000094)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'map', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000086)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'after', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000087)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'applied', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000086)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'server', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000084)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'develop', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'site', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000091)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'google', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000088)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'strategy', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000085)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'host', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'ruby', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000084)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'this', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000084)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'other', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000084)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'automate', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mWord Create (0.000085)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'entries', 4, '2008-05-24 23:30:11')[0m
+  [4;35;1mWord Create (0.000084)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-24 23:30:11', 1, 'with', 4, '2008-05-24 23:30:11')[0m
+  [4;36;1mDocument Load (0.000578)[0m   [0;1mSELECT * FROM documents LIMIT 1[0m
+  [4;35;1mWord Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: words.document_id: SELECT * FROM words WHERE (words.document_id = 4) [0m
+  [4;36;1mDocument Load (0.000538)[0m   [0;1mSELECT * FROM documents LIMIT 1[0m
+  [4;35;1mWord Load (0.006046)[0m   [0mSELECT * FROM words WHERE (words.document = 4) [0m
+  [4;36;1mWord Load (0.000536)[0m   [0;1mSELECT * FROM words LIMIT 1[0m
+  [4;35;1mDocument Load (0.000499)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mWord Load (0.006142)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mWord Load (0.005363)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mWord Load (0.006221)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mWord Load (0.005644)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000264)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000223)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000221)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000223)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000220)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000222)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000221)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000222)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000220)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000220)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000220)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000223)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000233)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000246)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000228)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000223)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000222)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000222)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000224)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000223)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000224)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000226)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000231)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000226)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000223)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000234)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000225)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000223)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000224)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000223)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000224)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000227)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000230)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000226)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000224)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000222)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000224)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000224)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000224)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000225)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000222)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000222)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000231)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mWord Load (0.006027)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mWord Load (0.006104)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mWord Load (0.005269)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000316)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000227)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000226)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000225)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000227)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000225)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000223)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000223)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000229)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000235)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000227)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000223)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000223)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000223)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000225)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000224)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000223)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000226)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000226)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000225)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000229)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000227)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000225)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000222)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000224)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000221)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000222)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000224)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000236)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000223)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000224)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000225)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000223)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000225)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000226)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000239)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000272)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000243)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000229)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000221)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000222)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000222)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000228)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mWord Load (0.006177)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000400)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000313)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000337)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000312)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000313)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000283)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000274)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000281)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000277)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000433)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000249)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000229)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000226)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000248)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000237)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000237)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000234)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000229)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000243)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000241)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000239)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000236)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000241)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000236)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000237)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000242)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000232)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000226)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000226)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000223)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000231)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000231)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000223)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000225)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000225)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000228)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000224)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000226)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000226)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000223)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000239)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000277)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000240)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mWord Load (0.005420)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000364)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000284)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000297)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000252)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000264)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000226)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000226)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000226)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000225)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000225)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000223)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000226)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000224)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000225)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000230)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000228)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000225)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000224)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000226)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000225)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000223)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000224)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000225)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000224)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000225)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000236)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000227)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000228)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000225)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000229)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000226)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000224)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000225)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000237)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000230)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000225)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000224)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000224)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000239)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000227)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000225)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000227)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000254)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mWord Load (0.005097)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000290)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000240)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000236)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000237)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000237)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000240)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000249)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000240)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000246)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000262)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000245)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000239)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000239)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000250)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000238)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000245)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000258)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000238)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000239)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000237)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000234)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000243)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000521)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000274)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000357)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000244)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000238)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000239)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000250)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000254)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000235)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000230)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000229)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000238)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000270)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000248)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000232)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000238)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000224)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000222)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000232)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000226)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000227)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mWord Load (0.006104)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mWord Load (0.005331)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mWord Load (0.005873)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mWord Load (0.006073)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000340)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mWord Load (0.004152)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mWord Load (0.006140)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000408)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mWord Load (0.005294)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000306)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mWord Load (0.004079)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000318)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mSQL (0.000564)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mWord Load (0.003907)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mWord Load (0.006069)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000393)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mSQL (0.000578)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mWord Load (0.003968)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000282)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mSQL (0.000583)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mWord Load (0.003879)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000272)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000486)[0m   [0mSELECT * FROM documents [0m
+  [4;36;1mWord Load (0.005562)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000421)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mWord Load (0.004751)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000322)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mWord Load (0.004633)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000283)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mWord Load (0.004087)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000307)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mWord Load (0.006136)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000418)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mWord Load (0.006009)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000343)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mWord Load (0.006037)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000348)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mWord Load (0.004650)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000241)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Create (0.000908)[0m   [0;1mINSERT INTO documents ("name", "updated_at", "contents", "created_at") VALUES('aaa', '2008-05-25 00:59:48', '--- 
+- ruby blog testing
+', '2008-05-25 00:59:48')[0m
+  [4;35;1mDocument Load (0.000554)[0m   [0mSELECT * FROM documents [0m
+  [4;36;1mDocument Load (0.000559)[0m   [0;1mSELECT * FROM documents [0m
+  [4;35;1mDocument Create (0.000669)[0m   [0mINSERT INTO documents ("name", "updated_at", "contents", "created_at") VALUES('aaa', '2008-05-25 01:01:51', '--- 
+- ruby blog testing
+', '2008-05-25 01:01:51')[0m
+  [4;36;1mSQL (0.000409)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mWord Create (0.000195)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-25 01:01:51', 1, 'blog', 5, '2008-05-25 01:01:51')[0m
+  [4;36;1mWord Create (0.000107)[0m   [0;1mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-25 01:01:51', 1, 'ruby', 5, '2008-05-25 01:01:51')[0m
+  [4;35;1mWord Create (0.000095)[0m   [0mINSERT INTO words ("updated_at", "weight", "word", "document", "created_at") VALUES('2008-05-25 01:01:51', 1, 'testing', 5, '2008-05-25 01:01:51')[0m
+  [4;36;1mWord Load (0.006806)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mWord Load (0.005125)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mWord Load (0.005867)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mWord Load (0.004305)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000674)[0m   [0;1mSELECT * FROM documents [0m
+  [4;35;1mSQL (0.000545)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mWord Load (0.006545)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000371)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000320)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 5) [0m
+  [4;35;1mWord Load (0.004802)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000273)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000230)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 5) [0m
+  [4;36;1mWord Load (0.006472)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000360)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000314)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 5) [0m
+  [4;35;1mWord Load (0.004942)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000272)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000254)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 5) [0m
+  [4;36;1mWord Load (0.006587)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000420)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000867)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 5) [0m
+  [4;35;1mWord Load (0.005161)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000281)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000263)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 5) [0m
+  [4;36;1mWord Load (0.004282)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000244)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mWord Load (0.005736)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000354)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;36;1mDocument Load (0.000345)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 5) [0m
+  [4;35;1mWord Load (0.004586)[0m   [0mSELECT * FROM words [0m
+  [4;36;1mDocument Load (0.000240)[0m   [0;1mSELECT * FROM documents WHERE (documents."id" = 4) [0m
+  [4;35;1mDocument Load (0.000230)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 5) [0m
+  [4;36;1mWord Load (0.003987)[0m   [0;1mSELECT * FROM words [0m
+  [4;35;1mDocument Load (0.000237)[0m   [0mSELECT * FROM documents WHERE (documents."id" = 4) [0m

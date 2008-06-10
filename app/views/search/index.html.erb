@@ -14,6 +14,15 @@ Se já estas registrado <a href="<%= root_path %>">autentica-te</a>!</code><p/>
 				</div>
 				<br/>
 	<% end %>
+	<h2><img src="/images/silk/icons/note.png"/> Ficheiros</h2>
+	<% form_tag search_files_path do |f| %> 
+		<div class=".panel_search_story">
+			<%= text_field 'query', nil, {:size => 25} %>
+
+		<%= submit_tag "Procurar" %> 
+				</div>
+				<br/>
+	<% end %>
 	<% if session[:user] %>
 	<h2><img src="/images/silk/icons/box.png"/> Trabalhos Práticos</h2>
 	<% form_tag search_projects_path do |f| %> 

@@ -27,4 +27,14 @@ class SearchController < ApplicationController
       @size = @projects.size
     end
   end
+  
+  def search_files
+    # sql inject?
+    if request.post?
+      lres = Project.find_all params[:query].to_s
+      @projects = []
+      lres.each { |l| @projects << Project.find_by_id(l.gsub(/[^0-9]/, '').to_i) }
+      @size = @projects.size
+    end
+  end
 end

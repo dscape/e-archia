@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  word: MyString
+  filepath: MyString
+  weight: 1
+
+two:
+  word: MyString
+  filepath: MyString
+  weight: 1
