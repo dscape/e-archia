@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(:version => 6) do
     t.string   "subtitle",    :limit => 256
     t.string   "filepath"
     t.string   "filename"
+    t.integer  "acm",                         :default => 1, :null => false
     t.text     "contents",    :limit => 2048,                :null => false
-    t.string   "authors",     :limit => 2048,                :null => false
-    t.string   "supervisors", :limit => 2048,                :null => false
+    t.text     "authors",     :limit => 2048,                :null => false
+    t.text     "supervisors", :limit => 2048,                :null => false
     t.string   "permalink",   :limit => 256,                 :null => false
-    t.datetime "deadline"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -3,6 +3,8 @@
 # author: nunojobpinto[at]gmail[dot]com
 # ============================================================================
 class ProjectsController < ApplicationController
+  
+  
   # ==========================================================================
   # auth required                                                     MEMBERS
   # ==========================================================================
@@ -14,6 +16,19 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @acm = {
+     1  => 'General Literature',
+     2  => 'Hardware',
+     3  => 'Computer Systems Organization',
+     4  => 'Software/Software Engineering',
+     5  => 'Data',
+     6  => 'Theory of Computation',
+     7  => 'Mathematics of Computing',
+     8  => 'Information Technology and Systems',
+     9  => 'Computing Methodologies',
+     10 => 'Computer Applications',
+     11 => 'Computing Milieux'
+    }
     @project = Project.find(params[:id])
   end
   
@@ -24,6 +39,19 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @acm = {
+     'General Literature'                 => 1,
+     'Hardware'                           => 2,
+     'Computer Systems Organization'      => 3,
+     'Software/Software Engineering'      => 4,
+     'Data'                               => 5,
+     'Theory of Computation'              => 6,
+     'Mathematics of Computing'           => 7,
+     'Information Technology and Systems' => 8,
+     'Computing Methodologies'            => 9,
+     'Computer Applications'              => 10,
+     'Computing Milieux'                  => 11
+    }
   end
 
   def edit

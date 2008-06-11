@@ -8,6 +8,11 @@
 <h2><%=h @project.subtitle %></h2>
 
 <p>
+  <b>ACM:</b><br/>
+  <%= @acm[@project.acm] %>
+</p>
+
+<p>
   <b>Licença:</b><br/>
   <%=h @project.contents %><br/>
   <%= link_to 'Descarregar', "../upload/#{@project.to_param}/LICENSE.txt" %>

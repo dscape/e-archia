@@ -8,6 +8,11 @@
 </p>
 
 <p>
+  <b>ACM</b><br />
+  <%= select_tag 'project[acm]', options_for_select(@acm) %>
+</p>
+
+<p>
   <b>Licença</b><br />
   <%= f.text_area :contents %>
 </p>

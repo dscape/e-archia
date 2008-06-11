@@ -16,6 +16,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string   :subtitle,    :limit => 256
       t.string   :filepath
       t.string   :filename
+      t.integer  :acm,         :default => 1,  :null => false
       t.text     :contents,    :limit => 2048, :null => false
       t.text     :authors,     :limit => 2048, :null => false
       t.text     :supervisors, :limit => 2048, :null => false

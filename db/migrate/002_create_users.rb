@@ -50,7 +50,7 @@ class CreateUsers < ActiveRecord::Migration
     u_root.profile       = "e-archia default admin profile"
     u_root.last_login_at = Time.now
     u_root.before_save
-    u_root.save
+    u_root.save false
 
   end
 
