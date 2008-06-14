@@ -34,6 +34,10 @@ ActionController::Routing::Routes.draw do |map|
   map.search '/procurar',
   :controller => 'search',
   :action => 'index'
+  
+  map.do_search '/procurar/:query',
+  :controller => 'search',
+  :action => 'search'
 
   map.search_stories '/procurar/artigo',
   :controller => 'search',
